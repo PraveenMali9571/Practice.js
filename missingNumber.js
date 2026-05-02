@@ -19,18 +19,27 @@
  * @return {number}
  */
 
-//  let nums=[9,6,4,2,3,5,7,0,1];
-let nums=[0,1];
+ let nums=[9,6,4,2,3,5,7,0,1,8,11,12];
+// let nums=[0,1];
 var missingNumber = function(nums) {
 
-    let sortedarr = nums.sort((a,b)=>a-b);
-    console.log(nums.length)
-    for(let i=0;i<=nums.length;i++){
+    // let sortedarr = nums.sort((a,b)=>a-b);
+    // console.log(nums.length)
+    // for(let i=0;i<=nums.length;i++){
 
-        if(i!==sortedarr[i]){
-            return i;
-        }
+    //     if(i!==sortedarr[i]){
+    //         return i;
+    //     }
+    // }
+
+    let n= nums.length;
+    let sum= (n*(n+1))/2;
+    let count =0;
+    for(let i=0;i<n;i++){
+        count=count+nums[i];
     }
+    return sum-count;
     
 };
+
 console.log(missingNumber(nums))
